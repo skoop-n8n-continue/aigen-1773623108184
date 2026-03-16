@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Viewer</title>
+</head>
+<body style="margin: 0; background: black; display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <video id="vid" controls autoplay muted style="max-width: 100%; max-height: 100%;">
+        <source src="video.webm" type="video/webm">
+    </video>
+    <script>
+        const v = document.getElementById('vid');
+        v.onplay = () => {
+            console.log('Video started playing');
+        };
+        v.onerror = (e) => {
+            console.error('Video error:', e);
+        };
+    </script>
+</body>
+</html>
